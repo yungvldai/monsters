@@ -1,0 +1,55 @@
+{
+  "name": "monsters",
+  "version": "1.0.0",
+  "description": "Monsters generator",
+  "main": "src/index.ts",
+  "author": {
+    "name": "Vlad Ivanov",
+    "email": "vladivanov.dev@gmail.com",
+    "url": "https://yungvldai.ru"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir build --extensions \".ts,.tsx\" --quiet",
+    "prestart": "npm run clean",
+    "start": "npm run build && SIZE=1024 OUT_DIR=../db node ./build/index.js",
+    "gen": "SIZE=1024 OUT_DIR=../db node ./build/index.js",
+    "clean": "rm -rf ../db && mkdir ../db",
+    "test": "npm start 1",
+    "format": "prettier --write 'src/**/*.ts'",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "canvas": "^2.8.0",
+    "chalk": "^4.1.2",
+    "cli-progress": "^3.9.1",
+    "core-js": "^3.19.0",
+    "hasha": "^5.2.2",
+    "jimp": "^0.16.1",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run format"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/cli-progress": "^3.9.2",
+    "@types/cli-spinner": "^0.2.1",
+    "@types/node": "^16.11.4",
+    "lint-staged": "^11.2.6",
+    "husky": "^7.0.4",
+    "prettier": "^2.4.1",
+    "typescript": "^3.7.5"
+  }
+}

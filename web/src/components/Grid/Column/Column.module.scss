@@ -1,0 +1,58 @@
+@use 'sass:math';
+@import '@styles/breakpoints.scss';
+
+$columns: 12;
+
+.Column {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+.cols {
+  @for $i from 0 to $columns + 1 {
+    &-#{$i} {
+      @if $i == 0 {
+        display: none;
+      } @else {
+        display: block;
+      }
+      $width: math.div(100%, $columns) * $i;
+      flex-basis: $width;
+      max-width: $width;
+    }
+  }
+}
+
+.colsTablet {
+  @include max-tablet {
+    @for $i from 0 to $columns + 1 {
+      &-#{$i} {
+        @if $i == 0 {
+          display: none;
+        } @else {
+          display: block;
+        }
+        $width: math.div(100%, $columns) * $i;
+        flex-basis: $width;
+        max-width: $width;
+      }
+    }
+  }
+}
+
+.colsMobile {
+  @include max-mobile {
+    @for $i from 0 to $columns + 1 {
+      &-#{$i} {
+        @if $i == 0 {
+          display: none;
+        } @else {
+          display: block;
+        }
+        $width: math.div(100%, $columns) * $i;
+        flex-basis: $width;
+        max-width: $width;
+      }
+    }
+  }
+}

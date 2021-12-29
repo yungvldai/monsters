@@ -1,0 +1,31 @@
+@import './breakpoints.scss';
+
+$header-levels: (
+  1: 32px,
+  2: 24px,
+  3: 16px
+);
+
+@mixin text-small {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+@mixin text-common {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+@mixin text-large {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+}
+
+@mixin text-header($level) {
+  font-family: 'Roboto Mono', monospace;
+  font-size: map-get($header-levels, $level);
+}

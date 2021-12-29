@@ -1,0 +1,19 @@
+{
+  "name": "monsters-sol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": {
+    "name": "Vlad Ivanov",
+    "email": "vladivanov.dev@gmail.com",
+    "url": "https://yungvldai.ru"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.3",
+    "openzeppelin-solidity": "^4.3.3",
+    "truffle": "^5.4.19",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.6.1"
+  }
+}

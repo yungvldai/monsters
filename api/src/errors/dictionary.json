@@ -1,0 +1,38 @@
+[
+  {
+    "status": 400,
+    "msg": "Bad request"
+  },
+  {
+    "status": 401,
+    "msg": "Unauthorized"
+  },
+  {
+    "status": 403,
+    "msg": "Forbidden"
+  },
+  {
+    "status": 404,
+    "msg": "Not found"
+  },
+  {
+    "status": 405,
+    "msg": "Method not allowed"
+  },
+  {
+    "status": 413,
+    "msg": "Payload Too Large"
+  },
+  {
+    "status": 418,
+    "msg": "I am teapot"
+  },
+  {
+    "status": 422,
+    "msg": "Unprocessable entity"
+  },
+  {
+    "status": 500,
+    "msg": "Server error"
+  }
+]
